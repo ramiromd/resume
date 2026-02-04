@@ -1,0 +1,45 @@
+\documentclass[10pt,a4paper]{article}
+
+% Paquetes fundamentales
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=1.5cm]{geometry} % Márgenes estrechos para CV
+\usepackage{enumitem}              % Para listas personalizadas
+\usepackage{hyperref}              % Para enlaces a LinkedIn o Email
+\usepackage{titlesec}              % Para dar formato a las secciones
+\usepackage{xcolor}                % Para un toque de color sutil
+\usepackage{graphicx} 	% Para la foto
+
+% Quitar sangría global
+\setlength{\parindent}{0pt}
+
+% Formato de secciones con una línea divisoria
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
+\begin{document}
+	
+	% --- COLUMNA IZQUIERDA (Información no profesional) ---
+	\begin{minipage}[t]{0.30\textwidth}
+		\vspace{0pt} % Alineación al tope
+		
+		% Foto de perfil
+		\includegraphics[width=\textwidth]{sample.png} 
+		
+		\vspace{5mm}
+		
+		\section*{Contacto}
+		\small
+		\href{mailto:email@ejemplo.com}{email@ejemplo.com} \\
+		+54 11 1234-5678 \\
+		La Plata, Argentina
+		
+		\vspace{5mm}
+		
+		\section*{Datos Personales}
+		Fecha de nac.: 01/01/1990 \\
+		DNI: 12.345.678 \\
+		Licencia de conducir: B1
+	\end{minipage}
+	
+\end{document}
