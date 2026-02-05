@@ -35,7 +35,6 @@
 \begin{document}
 	
 	% TODO: Fix full height.
-	% TODO: Padding.
 	% TODO: Adjust image size.
 	
 	% --- PINTAR EL FONDO DEL SIDEBAR
@@ -45,35 +44,35 @@
 	\begin{paracol}{2}
 	
 	% --- COLUMNA 0: SIDEBAR (IZQUIERDA) ---
-	% Compensamos el margen superior que quitamos en geometry para el contenido
-	\vspace*{0.5cm}
-	% Compensamos el margen izquierdo que quitamos en geometry para el contenido
-	\hspace{0.02\textwidth} 
-	\includegraphics[]{sample.png}
-	
-	\vspace{5mm}
 
-	\section*{Contacto}
-	\small
-	\textbf{Email:}\\ \href{mailto:tu@email.com}{tu@email.com} \\[6pt]
-	\textbf{Teléfono:}\\ +54 221 123 4567 \\[6pt]
-	\textbf{LinkedIn:}\\ \href{https://linkedin.com}{/in/tusuario}
-	
-	\vspace{5mm}
-	
-	\section*{Sobre Mí}
-	\small
-	Nacionalidad: Argentino \\
-	Residencia: La Plata \\
-	Disponibilidad: Inmediata
-	
-	\vspace{5mm}
-	
-	\section*{Idiomas}
-	\small
-	Español: Nativo \\
-	Inglés: C1 Advanced \\
-	Portugués: Básico
+	\vspace*{0.5cm} % Compensamos el margen superior que quitamos en geometry para el contenido
+	\hspace{0.02\textwidth} % Padding izquierdo respecto al separador de columnas
+	\begin{minipage}{0.90\textwidth} % Controla el margen derecho del texto
+		
+		% REDEFINICIÓN LOCAL PARA EL SIDEBAR (Sin líneas horizontales)
+		\titleformat{\section}{\large\bfseries\color{primary}\uppercase}{}{0pt}{}
+		\titlespacing{\section}{0pt}{12pt}{4pt}
+		
+		\includegraphics[]{sample.png}
+		
+		\vspace{5mm}
+		
+		\section*{Contacto}
+		\small
+		\textbf{Email}\\ \href{mailto:ramiro.md90@gmail.com}{ramiro.md90@gmail.com} \\[6pt]
+		\textbf{Teléfono}\\ +54 221 123 4567 \\[6pt]
+		\textbf{LinkedIn}\\ \href{https://linkedin.com}{/in/tusuario}\\[6pt]
+		\textbf{Github}\\ \href{https://linkedin.com}{/in/tusuario}	
+		\section*{Datos personales}
+		\small
+		\textbf{Fecha de Nacimiento}\\29/06/1990 \\[6pt]
+		\textbf{Número de documento (DNI)}\\ 35.609.454 \\[6pt]
+		\textbf{Domicilio}\\ La Plata, Provincia de Buenos Aires,\\Argentina\\
+		\section*{Idiomas}
+		\small
+		\textbf{Español}: Nativo \\
+		\textbf{Inglés}: Lee y entiende \\
+	\end{minipage}
 	
 	% Comando mágico para saltar a la columna de la derecha
 	\switchcolumn
@@ -137,7 +136,7 @@
 	
 	% TODO: Didn't work
 	% Forzamos que la página se mantenga abierta hasta el final
-	\vspace*{\fill}\null
+	%\vspace*{\fill}\null
 	\end{paracol}
 	
 \end{document}
