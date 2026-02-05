@@ -3,43 +3,61 @@
 % Paquetes fundamentales
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\usepackage[margin=1.5cm]{geometry} % Márgenes estrechos para CV
+\usepackage[margin=0cm]{geometry} % Qutiamos los margenes. Util para que el sidebar quede pegado a los extremos.
 \usepackage{enumitem}              % Para listas personalizadas
 \usepackage{hyperref}              % Para enlaces a LinkedIn o Email
 \usepackage{titlesec}              % Para dar formato a las secciones
 \usepackage{xcolor}                % Para un toque de color sutil
+\usepackage[most]{tcolorbox}	% Background colors
 \usepackage{graphicx} 	% Para la foto
+
+% Definición de colores
+\definecolor{primary}{RGB}{44, 62, 80}
+\definecolor{accent}{RGB}{41, 128, 185}
 
 % Quitar sangría global
 \setlength{\parindent}{0pt}
-
+\pagestyle{empty} % Quita números de página que pueden mover el contenido
 % Formato de secciones con una línea divisoria
 \titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{5pt}
 
 \begin{document}
-	
 	% --- COLUMNA IZQUIERDA (Información no profesional) ---
 	\begin{minipage}[t]{0.30\textwidth}
-		\vspace{0pt} % Alineación al tope
+		\begin{tcolorbox}[
+			enhanced,
+			sharp corners, % Esquinas rectas para un look profesional
+			boxrule=0pt, % Sin borde
+			colback=gray!10, % Gris muy sutil (10% de negro)
+			height=\textheight, % Hace que el gris llegue hasta el final de la página
+			left=5pt, right=5pt, top=10pt, % Espaciado interno
+		]
 		
-		% Foto de perfil
-		\includegraphics[width=\textwidth]{sample.png} 
+			\vspace{0pt} % Alineación al tope
+			
+			% Foto de perfil
+			\includegraphics[width=\textwidth]{sample.png} 
+			
+			\vspace{5mm}
+			
+			\section*{Contacto}
+			\small
+			\href{mailto:email@ejemplo.com}{email@ejemplo.com} \\
+			+54 11 1234-5678 \\
+			La Plata, Argentina
+			
+			\vspace{5mm}
+			
+			\section*{Datos Personales}
+			Fecha de nac.: 01/01/1990 \\
+			DNI: 12.345.678 \\
+			Licencia de conducir: B1
 		
-		\vspace{5mm}
-		
-		\section*{Contacto}
-		\small
-		\href{mailto:email@ejemplo.com}{email@ejemplo.com} \\
-		+54 11 1234-5678 \\
-		La Plata, Argentina
-		
-		\vspace{5mm}
-		
-		\section*{Datos Personales}
-		Fecha de nac.: 01/01/1990 \\
-		DNI: 12.345.678 \\
-		Licencia de conducir: B1
+		\end{tcolorbox}
+
 	\end{minipage}
+
+	
 	
 \end{document}
