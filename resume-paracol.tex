@@ -1,0 +1,93 @@
+\documentclass[10pt,a4paper]{article}
+
+% Paquetes fundamentales
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=0cm, top=0cm, bottom=0cm, left=0cm, right=0cm]{geometry} % Margenes del documento
+\usepackage{enumitem}              % Para listas personalizadas
+\usepackage{hyperref}              % Para enlaces a LinkedIn o Email
+\usepackage{titlesec}              % Para dar formato a las secciones
+\usepackage{xcolor}                % Para un toque de color sutil
+\usepackage[most]{tcolorbox}	% Background colors
+\usepackage{graphicx} 	% Para la foto
+\usepackage{paracol} % El corazón del nuevo layout
+
+% Definición de colores
+\definecolor{primary}{RGB}{33, 47, 61}
+\definecolor{accent}{RGB}{52, 152, 219}
+\definecolor{sidebarGray}{RGB}{242, 244, 244}
+
+% --- CONFIGURACIÓN DE PARACOL ---
+\columnratio{0.32} % 32% para el sidebar, el resto para el contenido
+\setlength{\columnsep}{1cm} % Espacio entre columnas
+
+% --- CONFIGURACIÓN GLOBAL ---
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% Formato de secciones
+\titleformat{\section}{\large\bfseries\color{primary}\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{15pt}{8pt}
+
+
+\begin{document}
+	
+	% TODO: Fix full height.
+	% TODO: Padding.
+	% TODO: Adjust image size.
+	
+	% --- PINTAR EL FONDO DEL SIDEBAR
+	% El segundo argumento [0pt][\paperheight] asegura que el color llegue al final del papel
+	\backgroundcolor{c[0][0pt][\paperheight]}{sidebarGray}
+	
+	\begin{paracol}{2}
+	
+	% --- COLUMNA 0: SIDEBAR (IZQUIERDA) ---
+	% Compensamos el margen superior que quitamos en geometry para el contenido
+	\vspace*{0.5cm}
+	% Compensamos el margen izquierdo que quitamos en geometry para el contenido
+	\hspace{0.02\textwidth} 
+	\includegraphics[]{sample.png}
+	
+	\vspace{5mm}
+
+	\section*{Contacto}
+	\small
+	\textbf{Email:}\\ \href{mailto:tu@email.com}{tu@email.com} \\[6pt]
+	\textbf{Teléfono:}\\ +54 221 123 4567 \\[6pt]
+	\textbf{LinkedIn:}\\ \href{https://linkedin.com}{/in/tusuario}
+	
+	\vspace{5mm}
+	
+	\section*{Sobre Mí}
+	\small
+	Nacionalidad: Argentino \\
+	Residencia: La Plata \\
+	Disponibilidad: Inmediata
+	
+	\vspace{5mm}
+	
+	\section*{Idiomas}
+	\small
+	Español: Nativo \\
+	Inglés: C1 Advanced \\
+	Portugués: Básico
+	
+	% Comando mágico para saltar a la columna de la derecha
+	\switchcolumn
+	
+	 % --- COLUMNA 1: CONTENIDO PROFESIONAL (DERECHA) ---
+	\vspace{5pt}
+	
+	% --- ENCABEZADO ---
+	% Compensamos el margen superior que quitamos en geometry para el contenido
+	\vspace*{0.5cm}
+	{\fontsize{34}{38}\selectfont \textbf{\color{primary} Ramiro}} \\[2pt]
+	{\fontsize{34}{38}\selectfont \textbf{\color{primary} Martínez D'Elía}} \\[8pt]
+	{\Large \textbf{\color{accent} Software Engineer}} \\
+	
+	 % Forzamos que la página se mantenga abierta hasta el final
+	\vspace*{\fill}\null
+	\end{paracol}
+	
+\end{document}
