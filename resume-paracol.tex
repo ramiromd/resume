@@ -12,6 +12,7 @@
 \usepackage{graphicx} 	% Para la foto
 \usepackage{paracol} % El corazón del nuevo layout
 \usepackage{lipsum} % Lorem ipsum text generator
+\usepackage{multicol} % multicolum package
 
 % Definición de colores
 \definecolor{primary}{RGB}{33, 47, 61}
@@ -90,8 +91,8 @@
 	\lipsum[1][1-4] % Párrafo largo de relleno
 	
 	\section{Habilidades}
-	% TODO: Fix margins
-	\begin{minipage}[t]{0.48\textwidth}
+	\setlength{\multicolsep}{0pt} % Quitamos el espacio superior de multicol
+	\begin{multicols}{2}
 		\textbf{Backend \& Core}
 		\begin{itemize}[noitemsep, topsep=2pt, leftmargin=10pt]
 			\item Python (Django/FastAPI)
@@ -99,9 +100,7 @@
 			\item Node.js \& TypeScript
 			\item Java (Spring Boot)
 		\end{itemize}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.48\textwidth}
+	\columnbreak
 		\textbf{Cloud \& DevOps}
 		\begin{itemize}[noitemsep, topsep=2pt, leftmargin=10pt]
 			\item AWS (Lambda, S3, EC2)
@@ -109,7 +108,7 @@
 			\item CI/CD (GitHub Actions)
 			\item Terraform (IaC)
 		\end{itemize}
-	\end{minipage}
+	\end{multicols}
 	
 	\section{Educación}
 	\textbf{Analista Programador Universitario} \hfill \textit{Completado} \\
