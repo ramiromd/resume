@@ -1,8 +1,9 @@
 \documentclass[10pt,a4paper]{article}
 
 % Paquetes fundamentales
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc} % Allows inputting special characters directly
+\usepackage[T1]{fontenc}    % Better font encoding for accented characters
+\usepackage[spanish]{babel} % Handles Spanish hyphenation and terminology
 \usepackage[margin=0cm, top=0cm, bottom=0cm, left=0cm, right=0.5cm]{geometry} % Margenes del documento
 \usepackage{enumitem}              % Para listas personalizadas
 \usepackage{hyperref}              % Para enlaces a LinkedIn o Email
@@ -46,6 +47,7 @@
 	
 	% TODO: Fix full height.
 	% TODO: Adjust image size.
+	% TODO: Move column to right for ATS
 	
 	% --- PINTAR EL FONDO DEL SIDEBAR
 	% El segundo argumento [0pt][\paperheight] asegura que el color llegue al final del papel
@@ -129,28 +131,13 @@
 	
 	\section{Trayectoria}
 	% Puesto 1
-	\cvJobPosition{Senior Tech Lead}{2021}{Actualidad}{Empresa de Tecnología Global S.A.}{
-		\begin{itemize}[noitemsep, topsep=4pt, leftmargin=15pt]
-		\item Liderazgo de un equipo multidisciplinario de 8 desarrolladores para el rediseño de la infraestructura crítica en AWS.
-		\item Implementación de microservicios en Go, reduciendo la latencia de respuesta en un 35\%.
-		\item Mentoría activa de perfiles Junior y Mid-level, mejorando la velocidad de entrega del equipo en un 20\%.
-	\end{itemize}}
-	
-	\vspace{10pt}
-	
-	% Puesto 2
-	\textbf{Fullstack Software Engineer} \hfill \textit{Marzo 2018 -- Diciembre 2020} \\
-	\textit{Innovación Digital Hub}
-	\begin{itemize}[noitemsep, topsep=4pt, leftmargin=15pt]
-		\item Desarrollo y despliegue de aplicaciones web SPA utilizando React y Node.js.
-		\item Optimización de bases de datos PostgreSQL, mejorando el rendimiento de las consultas complejas en un 50\%.
-		\item Integración de pasarelas de pago internacionales (Stripe, PayPal) para clientes en Europa y LATAM.
-	\end{itemize}
+	\input{experience/00-manantiales}
 	
 	% TODO: Didn't work
 	% Forzamos que la página se mantenga abierta hasta el final
 	%\vspace*{\fill}\null
 	%\miFirma
+	%\input{example}
 	\end{paracol}
 	
 	
