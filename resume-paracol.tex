@@ -57,93 +57,15 @@
 	\begin{paracol}{2}
 	
 	% --- COLUMNA 0: SIDEBAR (IZQUIERDA) ---
+	\input{sidebar}
 
-	\vspace*{0.5cm} % Compensamos el margen superior que quitamos en geometry para el contenido
-	\hspace{0.02\textwidth} % Padding izquierdo respecto al separador de columnas
-	\begin{minipage}{0.90\textwidth} % Controla el margen derecho del texto
-		
-		% REDEFINICIÓN LOCAL PARA EL SIDEBAR (Sin líneas horizontales)
-		\titleformat{\section}{\large\bfseries\color{primary}\uppercase}{}{0pt}{}
-		\titlespacing{\section}{0pt}{12pt}{4pt}
-		
-		\includegraphics[]{sample.png}
-		
-		% --- LEYENDA DE ACTUALIZACIÓN ---
-		\fontsize{7pt}{8pt}
-		\textit{Actualizado: \today}
-		
-		\section*{Contacto}
-		\small
-		\textbf{Email}\\ \href{mailto:ramiro.md90@gmail.com}{ramiro.md90@gmail.com} \\[6pt]
-		\textbf{Teléfono}\\ +54 221 123 4567 \\[6pt]
-		\textbf{LinkedIn}\\ \href{https://linkedin.com/in/ramiro-martínez-d-elía-b65a9931}{/in/ramiro-martínez-d-elía-b65a9931}\\[6pt]
-		\textbf{Github}\\ \href{https://github.com/ramiromd}{/ramiromd}	
-		\section*{Datos personales}
-		\small
-		\textbf{Fecha de Nacimiento}\\29/06/1990 \\[6pt]
-		\textbf{Número de documento (DNI)}\\ 35.609.454 \\[6pt]
-		\textbf{Domicilio}\\ La Plata, Provincia de Buenos Aires,\\Argentina\\
-		\section*{Idiomas}
-		\small
-		\textbf{Español}: Nativo \\
-		\textbf{Inglés}: Lee y entiende \\
-	\end{minipage}
 	
 	% Comando mágico para saltar a la columna de la derecha
 	\switchcolumn
 	
 	% --- COLUMNA 1: CONTENIDO PROFESIONAL (DERECHA) ---
 	
-	% --- ENCABEZADO ---
-	% Compensamos el margen superior que quitamos en geometry para el contenido
-	\vspace*{0.5cm}
-	{\fontsize{34}{38}\selectfont \textbf{\color{primary} Ramiro}} \\[2pt]
-	{\fontsize{34}{38}\selectfont \textbf{\color{primary} Martínez D'Elía}} \\[8pt]
-	{\Large \textbf{\color{accent} Software Engineer}} \\
-	
-	\section{Perfil Profesional}
-	\lipsum[1][1-4] % Párrafo largo de relleno
-	
-	\section{Habilidades}
-	\setlength{\multicolsep}{0pt} % Quitamos el espacio superior de multicol
-	\begin{multicols}{2}
-		\textbf{Backend \& Core}
-		\begin{itemize}[noitemsep, topsep=2pt, leftmargin=10pt]
-			\item Python (Django/FastAPI)
-			\item Go (Microservicios)
-			\item Node.js \& TypeScript
-			\item Java (Spring Boot)
-		\end{itemize}
-	\columnbreak
-		\textbf{Cloud \& DevOps}
-		\begin{itemize}[noitemsep, topsep=2pt, leftmargin=10pt]
-			\item AWS (Lambda, S3, EC2)
-			\item Docker \& Kubernetes
-			\item CI/CD (GitHub Actions)
-			\item Terraform (IaC)
-		\end{itemize}
-	\end{multicols}
-	
-	\section{Educación}
-	\cvEducationLine{Analista Programador Universitario}{Completado}{Universidad Nacional de La Plata}
-	
-	
-	\section{Trayectoria}
-	
-	
-	\input{experience/05-geopagos}
-	\input{experience/04-gloobes}
-	\input{experience/03-freelogic}
-	\input{experience/02-fcsj-unlp}
-	\input{experience/01-arzion}
-	\input{experience/00-manantiales}
-
-	
-	% TODO: Didn't work
-	% Forzamos que la página se mantenga abierta hasta el final
-	%\vspace*{\fill}\null
-	%\miFirma
-	%\input{example}
+	\input{main}
 	\end{paracol}
 	
 	
