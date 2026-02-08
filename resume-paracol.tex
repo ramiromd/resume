@@ -23,7 +23,7 @@
 \definecolor{sidebarGray}{RGB}{242, 244, 244}
 
 % --- CONFIGURACIÓN DE PARACOL ---
-\columnratio{0.32} % 32% para el sidebar, el resto para el contenido
+\columnratio{0.68} % 32% para el sidebar, el resto para el contenido
 \setlength{\columnsep}{1cm} % Espacio entre columnas
 
 % --- CONFIGURACIÓN GLOBAL ---
@@ -56,16 +56,17 @@
 	
 	\begin{paracol}{2}
 	
-	% --- COLUMNA 0: SIDEBAR (IZQUIERDA) ---
-	\input{sidebar}
+	% --- COLUMNA 0: MAIN (IZQUIERDA) ---
+
+	\input{main}
 
 	
 	% Comando mágico para saltar a la columna de la derecha
 	\switchcolumn
 	
-	% --- COLUMNA 1: CONTENIDO PROFESIONAL (DERECHA) ---
+	% --- COLUMNA 1: SIDEBAR (DERECHA) ---
 	
-	\input{main}
+	\input{sidebar}
 	\end{paracol}
 	
 	
