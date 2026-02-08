@@ -16,3 +16,19 @@
 	\vspace{4pt}%\\
 	\textbf{Proyecto:} \textit{#1}
 }
+
+
+% Comando para la posición general (Empresa, Tiempo General, Ubicación)
+\newcommand{\cvExperienceHeader}[3]{
+	\noindent \textbf{\Large #1} \hfill \textbf{\small #2} \\ % Empresa y Fecha Total
+	\noindent \textit{\small #3}                               % Ubicación
+	\vspace{8pt}
+}
+
+% Comando para el Proyecto, Rol y Periodo específico (3 argumentos)
+% #1: Rol, #2: Proyecto, #3: Periodo
+\newcommand{\cvRoleProject}[3]{
+	\noindent \textbf{Rol:} #1 \hfill \textbf{\footnotesize #3} \\
+	\noindent \textbf{Proyecto:} \textit{#2}
+	\vspace{4pt}
+}
