@@ -4,17 +4,17 @@
 \usepackage{hyperref}              % Para enlaces a LinkedIn o Email
 \usepackage{xcolor}                % Para un toque de color sutil
 \usepackage{custom}
-
-% --- Paquetes de Idioma y Codificación ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}    % Esencial para que las fuentes se rendericen bien
 \usepackage[spanish]{babel}
-\setlength{\parskip}{0pt}
 
-% Colores
+% --- Configuración de párrafos --- %
+\setlength{\parskip}{5pt}
+
+% --- Configuración de colores --- %
 \definecolor{accent}{RGB}{52, 152, 219}
 
-% Configuración de la Sección
+% --- Configuración global de \section --- %
 \titleformat{\section}
 {\normalfont\large\bfseries\uppercase} % 1. MAYÚSCULAS y Negrita
 {}                                     % 2. Quitar el bullet numérico (etiqueta vacía)
@@ -24,6 +24,7 @@
 \vspace{-1ex}\rule{\textwidth}{0.4pt} % 5. Línea horizontal INFERIOR
 ]
 
+% --- Configuración de hipervínculos --- %
 \hypersetup{
 	colorlinks=true,      % Activa el color en el texto del link
 	linkcolor=accent,     % Color para enlaces internos
