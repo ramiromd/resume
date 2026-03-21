@@ -1,0 +1,81 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=1.0cm, top=1.0cm, bottom=1.0cm, left=1.0cm, right=1.0cm]{geometry} % Margenes del documento
+\usepackage{titlesec} % Formato de títulos o encabezados
+\usepackage{hyperref}              % Para enlaces a LinkedIn o Email
+\usepackage{xcolor}                % Para un toque de color sutil
+\usepackage{custom}
+
+% --- Paquetes de Idioma y Codificación ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}    % Esencial para que las fuentes se rendericen bien
+\usepackage[spanish]{babel}
+\setlength{\parskip}{0pt}
+
+% Colores
+\definecolor{accent}{RGB}{52, 152, 219}
+
+% Configuración de la Sección
+\titleformat{\section}
+{\normalfont\large\bfseries\uppercase} % 1. MAYÚSCULAS y Negrita
+{}                                     % 2. Quitar el bullet numérico (etiqueta vacía)
+{0pt}                                  % 3. Sin espacio de numeración
+{}									% 4. Linea horizontal SUPERIOR
+[%
+\vspace{-1ex}\rule{\textwidth}{0.4pt} % 5. Línea horizontal INFERIOR
+]
+
+\hypersetup{
+	colorlinks=true,      % Activa el color en el texto del link
+	linkcolor=accent,     % Color para enlaces internos
+	filecolor=accent,     % Color para archivos
+	urlcolor=accent,      % Color para URLs externas (LinkedIn, etc)
+	citecolor=accent,
+	pdfborder={0 0 0}     % Elimina definitivamente cualquier recuadro
+}
+
+\begin{document}
+	
+	\cvTitle{Ramiro  Martínez D'Elía}
+	\cvSubtitle{Software Engineer - Solution Architect}
+	
+	\section{Acerca de mi}
+
+	
+	Software Engineer con +10 años de trayectoria, especializado en el diseño y modernización de arquitecturas orientadas a servicios y la transición de sistemas legacy hacia microservicios escalables. Mi enfoque integra la gestión estratégica del backlog con una sólida capacidad de ejecución en todo el ciclo de vida del software.
+	
+	Poseo experiencia en el diseño e implementación de soluciones de alta disponibilidad para procesamiento  masivo de datos, con especial énfasis en la resiliencia de sistemas mediante la observabilidad proactiva (utilizando herramientas del tipo APM).
+	
+	Tengo capacidad para traducir dominios de negocio complejos, como la liquidación impositiva y flujos financieros, en modelos técnicos robustos, priorizando la calidad del código y la gestión inteligente de la deuda técnica para asegurar la escalabilidad a largo plazo.
+	
+	\section{Contacto}
+	
+	\begin{center}
+		% TODO: No me gusta la presentación
+		\small
+		\textbf{Teléfono:} +54 221 6393338 |\hfill
+		\textbf{Email:} \href{mailto:ramiro.md90@gmail.com}{ramiro.md90@gmail.com} |\hfill 
+		\textbf{LinkedIn:} \href{https://linkedin.com/in/ramiromd}{/in/ramiromd} |\hfill 
+		\textbf{GitHub:} \href{https://github.com/ramiromd}{/ramiromd} |\hfill
+		\textbf{Ciudad:} La Plata, Provincia de Buenos Aires, Argentina
+	\end{center}
+	
+	\section{Habilidades}
+	{
+		\setlength{\parindent}{0pt}
+		
+		\textbf{Arquitectura y calidad:} Microservicios, Programación Orientada a Objetos (POO), Principios SOLID, Clean Architecture, Patrones de diseño, Event sourcing.
+		
+		\textbf{Lenguajes:} PHP, Java, JavaScript.
+		
+		\textbf{Frameworks:} Spring Boot, Symfony.
+		
+		\textbf{Bases de datos:} Relacionales (MySQL, PostgreSQL) y NoSQL (MongoDB, Redis).
+		
+		\textbf{DevOps y observabilidad:} Docker, Kubernetes, CI/CD, Elastic (APM).
+		
+		\textbf{Soft Skills:}  Visión estratégica de producto, Liderazgo técnico y mentoría, gestión de geuda gécnica, gestión de trade-offs y deuda técnica, comunicación con stakeholders, traducción de complejidad normativa, pensamiento analítico.
+	}
+	
+	
+	
+\end{document}
